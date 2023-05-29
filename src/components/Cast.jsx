@@ -21,8 +21,6 @@ export default function Cast() {
     fetchData();
   }, [movieId]);
 
-  console.log(castMovieData);
-
   return (
     <div>
       <ul>

@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export default function MovieDetails() {
   const location = useLocation();
-  console.log(location);
+
   const [selectedMovieData, setSelectedMovieData] = useState({});
   const [loading, setLoading] = useState(false);
   const { movieId } = useParams();
@@ -34,7 +34,12 @@ export default function MovieDetails() {
       <Link to={backLinkLocationRef.current}>GO back</Link>
       {loading && <div>Loading...</div>}
       <h1> {title}</h1>
-      <img src={`https://image.tmdb.org/t/p/w200/${poster_path}`} alt={title} />
+      {poster_path && (
+        <img
+          src={`https://image.tmdb.org/t/p/w200/${poster_path}`}
+          alt={title}
+        />
+      )}
       <ul>
         <li>
           <Link to="cast">Cast</Link>

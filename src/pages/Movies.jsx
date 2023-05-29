@@ -15,7 +15,7 @@ export default function Movies() {
     getMovieDataByRequest(searchValue).then(res =>
       setSearchMoviesData(res.data.results)
     );
-  }, []);
+  }, [searchValue]);
 
   const fetchData = async (event, searchValue) => {
     event.preventDefault();

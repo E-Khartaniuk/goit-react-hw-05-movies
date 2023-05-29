@@ -19,7 +19,7 @@ export function getMovieDataByRequest(query) {
   const response = axios.get(
     `https://api.themoviedb.org/3/search/movie?api_key=${API}&query=${query}`
   );
-  console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa', response);
+
   return response;
 }
 
@@ -39,10 +39,20 @@ export function getMovieReviews(movieId) {
   return response;
 }
 
-export default {
+// export default {
+//   getTrendMovieData,
+//   getMovieDataById,
+//   getMovieDataByRequest,
+//   getMovieCast,
+//   getMovieReviews,
+// };
+
+const api = {
   getTrendMovieData,
   getMovieDataById,
   getMovieDataByRequest,
   getMovieCast,
   getMovieReviews,
 };
+
+export default api;

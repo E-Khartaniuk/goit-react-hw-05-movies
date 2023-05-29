@@ -21,8 +21,6 @@ export default function Reviews() {
     fetchData();
   }, [movieId]);
 
-  console.log(reviewsData);
-
   return (
     <div>
       {!loading && <h2>Reviews:</h2>}
