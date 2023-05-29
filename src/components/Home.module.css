@@ -1,0 +1,15 @@
+.cardImg {
+  border-radius: 10px;
+}
+
+.card {
+  width: 230px;
+}
+
+.filmList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 9px;
+  list-style: none;
+}
